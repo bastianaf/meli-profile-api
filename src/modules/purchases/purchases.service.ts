@@ -5,8 +5,10 @@ import { DatabaseService } from 'src/database/database.service';
 export class PurchaseService {
     constructor(private readonly dbService: DatabaseService){}
     
-    getHello(): any {
+    getUserPurchases(): any {
         return this.dbService.getUserPurchases('1')
     }
+
+    
 
 }

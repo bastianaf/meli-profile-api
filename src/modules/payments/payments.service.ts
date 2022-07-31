@@ -1,11 +1,11 @@
-import { Inject, Injectable } from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 import { DatabaseService } from 'src/database/database.service';
 
 @Injectable()
-export class UserService {
+export class PaymentsService {
     constructor(private readonly dbService: DatabaseService){}
     
-    getHello(): any {
-        return this.dbService.getUser()
+    getPayment(): any {
+        return this.dbService.getPayment(7010191);
     }
 }
