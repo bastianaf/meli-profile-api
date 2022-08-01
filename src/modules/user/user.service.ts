@@ -13,7 +13,7 @@ export class UserService {
         return this.dbService.getUserRestrictions('1')
     }
 
-    getUserLevel(): any {
-        return this.dbService.getLevel('ORO')
+    getUserPurchases(): any {
+        return this.dbService.getUserPurchases('1')
     }
 }

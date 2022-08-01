@@ -1,5 +1,5 @@
 import { Controller, Get } from '@nestjs/common';
-import { UserService } from './users.service';
+import { UserService } from './user.service';
 
 @Controller('user')
 export class UserController {
@@ -16,8 +16,8 @@ export class UserController {
         return this.userService.getUserRestrictions();
     }
 
-    @Get('/level')
-    getUserLevel(): any {
-        return this.userService.getUserLevel();
+    @Get('/purchases')
+    userPurchases(): any {
+        return this.userService.getUserPurchases();
     }
 }
