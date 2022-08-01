@@ -5,7 +5,7 @@ import { DatabaseService } from 'src/database/database.service';
 export class PaymentService {
     constructor(private readonly dbService: DatabaseService){}
     
-    getPayment(): any {
-        return this.dbService.getPayment(7010191);
+    getPayment(paymentId: number): any {
+        return this.dbService.getPayment(paymentId);
     }
 }

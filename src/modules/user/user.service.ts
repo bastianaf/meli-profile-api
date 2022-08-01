@@ -9,11 +9,11 @@ export class UserService {
         return this.dbService.getUser()
     }
 
-    getUserRestrictions(): any {
-        return this.dbService.getUserRestrictions('1')
+    getUserRestrictions(userId: string): any {
+        return this.dbService.getUserRestrictions(userId)
     }
 
-    getUserPurchases(): any {
-        return this.dbService.getUserPurchases('1')
+    getUserPurchases(userId: string): any {
+        return this.dbService.getUserPurchases(userId)
     }
 }

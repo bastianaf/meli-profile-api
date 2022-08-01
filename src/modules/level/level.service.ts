@@ -5,7 +5,7 @@ import { DatabaseService } from 'src/database/database.service';
 export class LevelService {
     constructor(private readonly dbService: DatabaseService){}
     
-    getUserLevel(): any {
-        return this.dbService.getLevel('ORO')
+    getUserLevel(levelId: string): any {
+        return this.dbService.getLevel(levelId)
     }
 }
