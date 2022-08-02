@@ -13,7 +13,19 @@ export class UserService {
         return this.dbService.getUserRestrictions(userId)
     }
 
-    getUserPurchases(userId: string): any {
-        return this.dbService.getUserPurchases(userId)
+    async getUserPurchases(userId: string, limit: number = 10, offset: number = 0): Promise<any> {
+
+        const purchases: any = await this.dbService.getUserPurchases(userId)
+        if (offset >= purchases.length) {
+            const error = new Error('Bad request');
+            //error.status = 400;
+            throw error;
+        }
+        return {
+            total: purchases.length,
+            offset,
+            limit,
+            data: purchases.slice(offset, limit * (offset + 1)),
+        };
     }
 }

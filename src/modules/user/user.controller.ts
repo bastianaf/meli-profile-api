@@ -1,4 +1,4 @@
-import { Controller, Get, Param } from '@nestjs/common';
+import { Controller, Get, Query, Param } from '@nestjs/common';
 import { UserService } from './user.service';
 
 @Controller('user')
@@ -17,7 +17,7 @@ export class UserController {
     }
 
     @Get('/purchases/:user_id')
-    userPurchases(@Param() params): any {
-        return this.userService.getUserPurchases(params.user_id);
+    userPurchases(@Param() params, @Query() query): any {
+        return this.userService.getUserPurchases(params.user_id, parseInt(query.limit, 10), parseInt(query.offset, 10));
     }
 }
