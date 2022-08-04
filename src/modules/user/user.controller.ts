@@ -8,6 +8,7 @@ export class UserController {
 
     @Get('/')
     user(): any {
+        console.log("NEW REQUEST !")
         return this.userService.getUser();
     }
     
