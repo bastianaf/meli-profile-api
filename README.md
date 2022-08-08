@@ -1,49 +1,57 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
-
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
-
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+# MELI Profile API
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+<img align="right" width="150" height="150" src="https://http2.mlstatic.com/frontend-assets/ui-navigation/5.19.1/mercadolibre/180x180.png" alt="meli logo" /></img>
+
+This repository contains the source code of _MERCADO LIBRE PROFILE_ challenge
+
+> Este challenge consiste en dos partes, una de frontend y otra de backend. Dado que
+solemos trabajar en ambos mundos, te pedimos que lo tengas en cuenta a la hora de diseñar
+y desarrollar las distintas capas del proyecto. 
+
+> El backend debe tener los endpoints necesarios para servir la información que necesita el
+frontend. Los endpoints quedan a libre definición, pero sí vamos a proveerte un servicio de
+ejemplo llamado “MercadolibreService” que expone los distintos mocks de información que
+vas a necesitar.
 
 ## Installation
 
 ```bash
 $ npm install
 ```
+### Prerequisites  
+
+- NodeJs `^14.0.0`
+
+### Environment
+
+Create an `.env` file on root of project or export the requiered environment variables, you can check for the required env vars on `.env.example` file
 
 ## Running the app
 
+Run the following to start the app locally
 ```bash
-# development
-$ npm run start
-
-# watch mode
+# development watch mode
 $ npm run start:dev
 
 # production mode
 $ npm run start:prod
 ```
+
+## API
+
+MELI PROFILE API expose this resources:
+
+* User
+  * Profile
+  * Purchases
+  * Restrictions
+* Product Payment Info
+* Product Shipment Info
+* Meli Level Info
+
+>💡 Note: Remember that you need to attach a valid `x-api-key` to the header on each request. This is set as a minimum security layer
 
 ## Test
 
@@ -58,16 +66,16 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
-## Support
+## Framework
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+<a href="http://nestjs.com/" target="blank"><img align="left" width="175" height="100" style="margin-right: 20px" src="https://nestjs.com/img/logo_text.svg" alt="Nest Logo" /></a>
 
-## Stay in touch
+[Nest](https://github.com/nestjs/nest) is a TypeScript progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. [read more here](https://docs.nestjs.com/support).
 
-## License
+<br>
 
-Nest is [MIT licensed](LICENSE).
+___
+
+<right> _Author:_ [@bastianaf](https://github.com/bastiaf)</right>
