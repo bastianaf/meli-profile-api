@@ -6,10 +6,6 @@
 
 This repository contains the source code of _MERCADO LIBRE PROFILE_ challenge
 
-> Este challenge consiste en dos partes, una de frontend y otra de backend. Dado que
-solemos trabajar en ambos mundos, te pedimos que lo tengas en cuenta a la hora de diseñar
-y desarrollar las distintas capas del proyecto. 
-
 > El backend debe tener los endpoints necesarios para servir la información que necesita el
 frontend. Los endpoints quedan a libre definición, pero sí vamos a proveerte un servicio de
 ejemplo llamado “MercadolibreService” que expone los distintos mocks de información que
