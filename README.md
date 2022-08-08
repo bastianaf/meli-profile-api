@@ -29,7 +29,7 @@ Create an `.env` file on root of project or export the requiered environment var
 Run the following to start the app locally
 ```bash
 # development watch mode
-$ npm run start:dev
+$ PORT=4000 npm run start:dev
 
 # production mode
 $ npm run start:prod
