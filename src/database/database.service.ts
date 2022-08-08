@@ -1,4 +1,4 @@
-// istanbul ignore file
+import { Injectable, HttpStatus, HttpException  } from '@nestjs/common';
 
 // User
 const userJSON = require('./mocks/usuarios');
@@ -14,7 +14,6 @@ const paymentsJSON = require('./mocks/transacciones');
 // Shipments
 const shipmentsJSON = require('./mocks/envios');
 
-import { Injectable } from '@nestjs/common';
 
 
 @Injectable()
@@ -30,14 +29,13 @@ export class DatabaseService {
       try {
         if (!jsonFile || (parameter && !jsonFile[parameter])) {
           const error = new Error(notFoundErrorMessage);
-          //error.status = 404;
           throw error;
         }
         setTimeout(() => {
           resolve(parameter ? jsonFile[parameter] : jsonFile);
         }, timeout);
       } catch (error) {
-        reject(error);
+        throw new HttpException('ERROR: ' + error.message || 'unknow', HttpStatus.BAD_GATEWAY);
       }
     });
   }
