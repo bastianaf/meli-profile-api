@@ -1,6 +1,0 @@
-{
-    "version": 2,
-    "env": {
-        "X_API_KEY": "@x_api_key"
-    }
-}
