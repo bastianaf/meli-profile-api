@@ -21,8 +21,6 @@ export class UserService {
 
         const purchasesResult = [...purchases]
 
-        offset = offset > 0 ? offset + 1 : offset;
-
         return {
             total: purchases.length,
             offset,

@@ -3,8 +3,10 @@ import { AppModule } from './app.module';
 import { ConfigService } from '@nestjs/config';
 import  helmet from 'helmet';
 import { AllExceptionsFilter } from './exception.filter';
+import { Console } from 'console';
 
 async function bootstrap() {
+  console.log("⚡MELI PORFILE API | starting...");
   const app = await NestFactory.create(AppModule);
   app.enableCors({
     "origin": true,
@@ -20,6 +22,8 @@ async function bootstrap() {
 
   // ⚡ INIT SERVER
   await app.listen(config.get('port'));
+
+  console.log("up and runing at http://localhost:", config.get('port'))
 
   // EXIT EVENT LISTENER
   process.on('SIGINT', function () {
