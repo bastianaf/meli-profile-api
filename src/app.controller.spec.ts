@@ -15,8 +15,8 @@ describe('AppController', () => {
   });
 
   describe('root', () => {
-    it('should return "Hello World!"', () => {
-      expect(appController.getHello()).toBe('Hello World!');
+    it('should return healthy check message', () => {
+      expect(appController.getHello()).toBe('Meli Profile API up and runing...');
     });
   });
 });
