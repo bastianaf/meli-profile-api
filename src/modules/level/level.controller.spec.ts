@@ -2,6 +2,7 @@ import { Test, TestingModule } from '@nestjs/testing';
 import { LevelController } from './level.controller';
 import { DatabaseModule } from '../../database/database.module';
 import { LevelService } from './level.service';
+import { HttpException, HttpStatus } from '@nestjs/common';
 
 describe('LevelController', () => {
   let controller: LevelController;

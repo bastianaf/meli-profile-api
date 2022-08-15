@@ -13,7 +13,7 @@ import {
       const response = ctx.getResponse();
       const request = ctx.getRequest();
   
-      console.log(exception);
+      console.log("EXCEPTION", exception);
   
       const message = exception instanceof HttpException ? exception.message : '';
       const error =

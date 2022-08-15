@@ -3,7 +3,6 @@ import { AppModule } from './app.module';
 import { ConfigService } from '@nestjs/config';
 import  helmet from 'helmet';
 import { AllExceptionsFilter } from './exception.filter';
-import { Console } from 'console';
 
 async function bootstrap() {
   console.log("⚡MELI PORFILE API | starting...");
